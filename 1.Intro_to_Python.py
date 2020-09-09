@@ -65,3 +65,23 @@ def histogram():
     plt.show()
 
 # histogram()
+
+#Dictionary
+def dictionary_sample():
+    dictionary = {'Spain':'Madrid','USA':'Vegas'}
+    print(dictionary.keys())
+    print(dictionary.values())
+
+    # Keys have to be immutable objects like string, boolean, float, integer or tubles
+    # List is not immutable
+    # Keys are unique
+    dictionary['Spain'] = "Barcelona"    # update existing entry
+    print(dictionary)
+    dictionary['France'] = "Paris"       # Add new entry
+    print(dictionary)
+    del dictionary['Spain']              # remove entry with key 'spain'
+    print(dictionary)
+    print('France' in dictionary)        # check include or not
+    dictionary.clear()                   # remove all entries in dict
+    print(dictionary)
+
