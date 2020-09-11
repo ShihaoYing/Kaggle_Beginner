@@ -85,3 +85,29 @@ def dictionary_sample():
     dictionary.clear()                   # remove all entries in dict
     print(dictionary)
 
+
+#Pandas
+def pandas_sample():
+    data = data_read()
+    series = data['Defense']
+    data_frame = data[['Defense']]
+
+    print(type(series))
+    print(type(data_frame))
+    
+    #filter pandas data frame
+    x = data['Defense']>200
+    print(data[x])
+
+    #filter pandas with logic
+    y1 = data[np.logical_and(data['Defense']>200, data['Attack']>100 )]
+    print(y1)
+
+    y2 = data[(data['Defense']>200) & (data['Attack']>100)]
+    print(y2)
+
+#Scope
+
+import builtins
+print(dir(builtins))
+
